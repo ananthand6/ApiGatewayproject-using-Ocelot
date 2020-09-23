@@ -1,16 +1,17 @@
 {
-  "ReRoutes": [
+  "Routes": [
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
-      "ServiceName": "WeatherForecast",
+      "ServiceName": "Ananthan",
       "LoadBalancerOptions": {
         "Type": "LeastConnection"
       },
       "UpstreamPathTemplate": "/gateway/wf/{url}",
       "UpstreamHttpMethod": [ "Get", "Post" ],
-      "ReRoutesCaseSensitive": false
+      "RoutesCaseSensitive": false,
+      //"DangerousAcceptAnyServerCertificateValidator": true
     }
 
   ],
